@@ -1,0 +1,33 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<!-- <p>Author Page</p> -->
+<div class="row d-flex justify-content-between align-items-center">
+<div style="align-items: flex-end;">
+    <h1>{{data.name}}님 &nbsp; 상세조회</h1>
+</div>
+<hr>
+<div>
+    <a href="/author/{{data.id}}/update" class="btn btn-primary" >회원수정</a>
+    <a href="/authors" class="btn btn-secondary">회원목록</a>    
+</div>
+</div>
+<div class="row">
+<div>
+    <p ><b>이름</b></p>
+    <p class="form-control">{{data.name}}</p>
+    <p><b>Email</b></p>
+    <p class="form-control">{{data.email}}</p>
+    <p><b>Password</b></p>
+    <p class="form-control">{{data.password}}</p>
+    <p><b>게시글 수</b></p>
+    <p class="form-control">{{data.posts.count}}</p>
+<hr>
+<div>
+<span><b>가입일</b> : {{data.created_time}}</span>&nbsp;&nbsp;&nbsp;
+<span><b>회원정보수정일</b> : {{data.updated_time}}</span>
+</div>
+</div>
+</div>
+
+{% endblock%}
