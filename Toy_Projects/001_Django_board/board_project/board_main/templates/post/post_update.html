@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<h1>게시글 수정페이지</h1>
+<form method="POST" id="my_form">
+	{% csrf_token %}
+	<div >
+	<div class="form-group">
+		제목<input type="text" name="my_title" value={{post.title}} class="form-control">
+		<div class="form-group"></div>
+	</div>
+	<div>
+	<div class="form-group">
+		내용
+		<textarea name="my_content" class="form-control" rows="5">{{post.content}}</textarea>
+	</div>
+	<!-- 내용 : <input type="text" name="my_content" value={{post.content}}><br> -->
+	<div class="form-group">
+		작성자Email
+		<input type="text" name="my_email" value={{post.author.email}} class="form-control">
+	</div>
+	</div>
+	</div>
+	<input type="submit" value="수정완료" class="btn btn-primary">
+	<a href="http://localhost:8000/post/{{post.id}}" class="btn btn-secondary">수정취소</a>
+</form>
+{% endblock%}

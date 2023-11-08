@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            !Django학습지!
+        </title>
+        <link rel="style" href="C:\Users\SAMSUNG\Desktop\style_blink.css">
+        <style>
+            .blinking{
+    -webkit-animation: blink 0.5s ease-in-out infinite alternate;
+    -moz-animation: blink 0.5s ease-in-out infinite alternate;
+    animation: blink 0.5s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes blink{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @-moz-keyframes blink{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @keyframes blink{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+        </style>
+    </head>
+    <body>
+        <div>
+        <h1 style="color: blue;" class="blinking">여러분 반갑습니당!</h1>
+        <table>
+            <thead>
+                <tr>
+                <!-- <th>Age</th> -->
+                <th>ID</th>
+                <th>Email</th>
+                <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in datas %}
+                <tr>
+                    <!-- <td>{{data.age}}</td> -->
+                    <td>{{data.id}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.password}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p>오늘은 무엇을 배울까요?</p>
+        <!-- 파이썬 탬플릿 엔진과 html 주석간의 선후문제가 발생할 경우
+        {# #}을 통해 파이썬의 탬플릿엔진 문법을 감싼다-->
+        </div>
+    </body>
+</html>
