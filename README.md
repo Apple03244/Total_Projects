@@ -1,5 +1,5 @@
 # Total_Projects
-all of toy projects and team projects 
+Project Descriptions and Classification 
 
 ## Team Projects
 - 1. 서울시 빅데이터 캠퍼스 공모전(2023)
